@@ -1,0 +1,100 @@
+:root {
+    --main-accent-color: #000;
+    --main-background-color: #fff;
+    --invert-accent-color: #fff;
+    --invert-accent-color-hover: gray;
+    --main-nav-accent-color: red;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100%;
+}
+
+main, header {
+    width: 90%;
+    margin: 0.05em auto;
+    max-width: 1250px;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--main-accent-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+.nav-element:hover {
+    color: var(--main-nav-accent-color);
+}
+
+ul {
+    padding-left: 1em;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 2em;
+}
+
+footer {
+    display: flex;
+    background: var(--main-accent-color);
+    color: var(--invert-accent-color);
+    margin: 0;
+    height: 4em;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+table, th, tr, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    padding: 0.6em;
+}
+
+th, tr {
+    padding: 1.5em;
+}
+
+table {
+    margin-bottom: 3em;
+}
+
+.footer-content {
+    max-width: 1250px;
+    margin: 0.05em auto;
+    width: 90%;
+}
+
+.contact-email {
+    color: var(--invert-accent-color);
+}
+
+.contact-email:hover {
+    color: var(--invert-accent-color-hover);
+}
+
+.footer-text {
+    margin: 0;
+}
