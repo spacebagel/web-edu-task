@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аутентификация</title>
+    <link rel="stylesheet" href="/styles/general-style.css">
+    <link rel="stylesheet" href="/styles/login-style.css">
+    <link rel="icon" type="image/png" href="/imgs/icons/icon.png">
+</head>
+
+<body background="/imgs/purple-wood.jpg">
+    <div class="form-container">
+        <form action="https://httpbin.org/post" method="post">
+            <h1 class="h1-form-label">Вход в личный кабинет</h1>
+            <label for="login" class="form-input-label">Логин</label>
+            <input class="form-text-input" id="login" name="login" type="text" placeholder="Login" />
+
+            <label for="password" class="form-input-label">Пароль</label>
+            <input class="form-text-input" id="password" name="password" type="password" placeholder="•••" />
+
+            <div class="checkbox-row-container">
+                <input name="remember" id="remember" type="checkbox" value="remember">
+                <label for="remember">Запомнить меня</label>
+            </div>
+
+            <input class="form-submit-button" type="submit" value="Войти">
+        </form>
+    </div>
+</body>
+
+</html>
