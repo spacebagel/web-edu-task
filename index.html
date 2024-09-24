@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,8 @@
     <link rel="stylesheet" href="styles/main-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <script src="scripts/fill-script.js"></script>
@@ -20,12 +22,14 @@
             <a class="nav-element" href="#about-us">О нас</a>
             <a class="nav-element" href="#">Собрать ланч</a>
             <a class="nav-element" href="#">Заказы</a>
-            <a class="nav-element" href="#">Контакты</a>
+            <a class="nav-element" href="#our-contacts">Контакты</a>
         </nav>
     </header>
     <main>
         <section id="about-us">
-            <img src="imgs/food.jpg">
+            <div class="img-container">
+                <img src="imgs/food.jpg">
+            </div>
             <h2>О нас</h2>
             <p>Food Construct - доставка бизнес-ланчей в Москве. Мы привезем вам горячую вкусную
                 еду в любую точку города к назначенному времени.</p>
@@ -52,10 +56,16 @@
         </section>
     </main>
     <footer>
-        <div class="footer-content">
-            <p class="footer-text">Позвонить нам: +7-999-999-99-99</p>
-            <p class="footer-text">Email: <a href="#" class="contact-email">yummy_food@food.food</a></p>
+        <div class="footer-container">
+            <div id="our-contacts" class="footer-content">
+                <p class="footer-text">Позвонить нам: +7-999-999-99-99</p>
+                <p class="footer-text">Email: <a href="#" class="alt-link">yummy_food@food.food</a></p>
+            </div>
+            <div class="footer-content">
+                <a class="alt-link" href="/pages/feedback.html">Напишите нам</a>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
