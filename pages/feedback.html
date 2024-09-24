@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="/styles/feedback-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <form class="container" action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+        <h1>Оставьте сообщение</h1>
+        <label for="name" class="input-label">ФИО</label>
+        <input class="text-input" id="name" name="name" type="text" placeholder="Иванов Иван Иванович" required>
+
+        <label for="email" class="input-label">Email</label>
+        <input class="text-input" id="email" name="email" type="email" placeholder="i@mail.me"/>
+
+        <label class="input-label">Откуда Вы узнали о нас?</label>
+        <div class="radio-container">
+            <div class="func-button">
+                <input type="radio" name="know-about" id="search-adv" value="search-adv">
+                <label for="search-adv">Реклама в поисковике</label>
+            </div>
+            <div class="func-button">
+                <input type="radio" name="know-about" id="social-media-adv" value="social-media-adv">
+                <label for="social-media-adv">Реклама в социальных сетях</label>
+            </div>
+            <div class="func-button">
+                <input type="radio" name="know-about" id="friend-adv" value="friend-adv">
+                <label for="friend-adv">По советам знакомых</label>
+            </div>
+            <div class="func-button">
+                <input type="radio" name="know-about" id="other-source" value="other-source">
+                <label for="other-source">Другое</label>
+            </div>
+        </div>
+        <label class="input-label" for="message-type">Тип обращения</label>
+        <select name="message-type" id="message-type">
+            <option value="proposal">Предложение</option>
+            <option value="grievance">Жалоба</option>
+            <option value="other-message-type">Другое</option>
+        </select>
+
+        <label class="input-label" for="text-message">Текст обращения</label>
+        <textarea  cols="30" rows="10" id="text-message" name="text-message"></textarea>
+
+        <label class="input-label" for="attachment">Вложения</label>
+        <input id="attachment" name="attachment" type="file">
+        <div class="accept-button">
+            <input class="input-label" name="approval" id="approval" type="checkbox" value="yes">
+            <label for="approval">Даю согласие на обработку персональных данных</label>
+        </div>
+        <input class="submit-button" type="submit"  value="Отправить">
+    </form>
+</body>
+</html>

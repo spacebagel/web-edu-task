@@ -15,6 +15,7 @@ body {
 
 body {
     min-height: 100%;
+    margin: 0;
 }
 
 main, header {
@@ -23,7 +24,6 @@ main, header {
     max-width: 1250px;
 }
 
-
 a {
     text-decoration: none;
     color: var(--main-accent-color);
@@ -31,6 +31,12 @@ a {
 
 img {
     max-width: 100%;
+    height: auto;
+}
+
+.img-container {
+    max-height: 600px;
+    overflow: hidden;
 }
 
 p {
@@ -57,11 +63,25 @@ footer {
     color: var(--invert-accent-color);
     margin: 0;
     height: 4em;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 0 3em;
     justify-content: center;
 }
 
 
+.footer-container {
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 table, th, tr, td {
     border: 1px solid;
@@ -81,18 +101,14 @@ table {
     margin-bottom: 3em;
 }
 
-.footer-content {
-    max-width: 1250px;
-    margin: 0.05em auto;
-    width: 90%;
-}
 
-.contact-email {
+.alt-link {
     color: var(--invert-accent-color);
 }
 
-.contact-email:hover {
+.alt-link:hover {
     color: var(--invert-accent-color-hover);
+    cursor: pointer;
 }
 
 .footer-text {
