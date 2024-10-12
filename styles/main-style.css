@@ -118,3 +118,8 @@ table {
 .footer-text {
     margin: 0;
 }
+
+.active-link-section {
+    color: var(--main-nav-accent-color);
+}
+
