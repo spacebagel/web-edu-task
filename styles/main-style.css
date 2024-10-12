@@ -123,3 +123,27 @@ table {
     color: var(--main-nav-accent-color);
 }
 
+
+
+@media screen and (max-width: 750px) {
+    h1, h2 {
+        text-align: center;
+    }
+
+    footer {
+        height: 8em;
+        font-size: 0.7em;
+    }
+
+    nav {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        width: 100%;
+    }
+    .login-link {
+        visibility: collapse;
+    }
+}

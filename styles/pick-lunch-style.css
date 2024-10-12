@@ -10,6 +10,7 @@
     flex-direction: column;
     background-color: white;
     border-radius: 35px;
+    border: 2px solid transparent;
     padding: 30px 30px 40px 40px;
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
 }
@@ -21,11 +22,12 @@ img {
 
 .dish-card:hover {
     border: 2px solid tomato;
+    cursor: pointer;
 }
 
 .select-dish-button {
     height: 2.5em;
-    background-color: lightgray;
+    background-color: #f1eee9;
     color: black;
     border: none;
     font-size: 1em;
@@ -34,6 +36,73 @@ img {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.select-dish-button:hover {
-    background-color: gray;
+.dish-cost {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.dish-cost::after {
+    content: " ₽";
+}
+
+.dish-title {
+    margin-top: 0;
+}
+
+.dish-weight {
+    color: lightgray;
+}
+
+.dish-weight::after {
+    content: " г";
+}
+
+.dish-card:hover button {
+    background-color: lightgray;
+}
+
+@media screen and (max-width: 750px) {
+    h2 {
+        text-align: center;
+    }
+
+    body {
+        width: 100%;
+        align-items: center;
+    }
+    .dish-card {
+        display: flex;
+        flex-direction: column;
+        
+        padding: 1em 1em 1em 1em;
+    }
+
+    .lunch-dish-container {
+        display: grid;
+        width: 100%;
+        column-gap: 10px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: auto;
+        gap: 0.8em;
+    }
+
+    img {
+        max-width: 10em;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        width: 100%;
+    }
+    .login-link {
+        visibility: collapse;
+    }
 }
