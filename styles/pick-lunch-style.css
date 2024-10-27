@@ -1,3 +1,4 @@
+
 .lunch-dish-container {
     display: grid;
     width: 100%;
@@ -61,6 +62,86 @@ img {
     background-color: lightgray;
 }
 
+.order-lunch-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+
+    margin-bottom: 3em;
+}
+
+.order-lunch-part {
+    display: flex;
+    flex-direction: column;
+    gap: 0.33em;
+}
+
+.order-lunch-title {
+    text-align: center;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+.form-input-label {
+}
+
+
+.order-form-button-container {
+
+}
+
+.form-dish-input {
+
+}
+
+select,
+input::file-selector-button,
+.submit-button {
+    height: 3em;
+}
+
+input::file-selector-button,
+.submit-button,
+select {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    max-width: 100%;
+}
+
+input::file-selector-button:hover,
+.submit-button:hover,
+select:hover {
+    background-color: var(--button-color-hover);
+}
+
+input::file-selector-button:active,
+.submit-button:active,
+select:active {
+    background-color: var(--button-color-active);
+}
+
+.form-text-input {
+
+    margin-bottom: 1em;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-select-input {
+    margin-bottom: 1em;
+}
+
 @media screen and (max-width: 750px) {
     h2 {
         text-align: center;
@@ -104,5 +185,12 @@ img {
     }
     .login-link {
         visibility: collapse;
+    }
+
+    .order-lunch-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
     }
 }
