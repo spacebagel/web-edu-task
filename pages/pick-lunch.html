@@ -12,6 +12,9 @@
     <link rel="icon" type="image/png" href="../imgs/icons/icon.png">
 </head>
 
+<script src="../scripts/context.js"></script>
+<script src="../scripts/dish-list-fill.js"></script>
+
 <body>
     <header>
         <h1><a href="../index.html">Food Construct</a></h1>
@@ -26,86 +29,7 @@
         </div>
     </header>
     <main>
-        <section>
-            <h2>Выберите суп</h2>
-            <div class="lunch-dish-container">
-                <div class="dish-card">
-                    <img src="../imgs/dishes/soup-1.jpg" alt="soup">
-                    <p class="dish-cost">450</p>
-                    <p class="dish-title">Суп кимчи</p>
-                    <p class="dish-weight">330</p>
-                    <button class="select-dish-button ">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="../imgs/dishes/soup-2.jpeg" alt="soup">
-                    <p class="dish-cost">550</p>
-                    <p class="dish-title">Суп бахчи</p>
-                    <p class="dish-weight">320</p>
-                    <button class="select-dish-button ">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="../imgs/dishes/soup-3.jpeg" alt="soup">
-                    <p class="dish-cost">600</p>
-                    <p class="dish-title">Суп харчи</p>
-                    <p class="dish-weight">330</p>
-                    <button class="select-dish-button ">Добавить</button>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Выберите главное блюдо</h2>
-            <div class="lunch-dish-container">
-                <div class="dish-card">
-                    <img src="../imgs/dishes/main-dish-1.jpeg" alt="main dish">
-                    <p class="dish-cost">550</p>
-                    <p class="dish-title">Wok Тайская креветка</p>
-                    <p class="dish-weight">330</p>
-                    <button class="select-dish-button ">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="../imgs/dishes/main-dish-2.jpeg" alt="main dish">
-                    <p class="dish-cost">300</p>
-                    <p class="dish-title">Wok паназиатский</p>
-                    <p class="dish-weight">310</p>
-                    <button class="select-dish-button">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="../imgs/dishes/main-dish-3.jpeg" alt="main dish">
-                    <p class="dish-cost">445</p>
-                    <p class="dish-title">Wok классический</p>
-                    <p class="dish-weight">330</p>
-                    <button class="select-dish-button ">Добавить</button>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Выберите напиток</h2>
-            <div class="lunch-dish-container">
-                <div class="dish-card">
-                    <img src="../imgs/dishes/drink-1.jpeg" alt="drink">
-                    <p class="dish-cost">700</p>
-                    <p class="dish-title">Кровь дракона</p>
-                    <p class="dish-weight">330</p>
-                    <button class="select-dish-button ">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="../imgs/dishes/drink-2.jpeg" alt="drink">
-                    <p class="dish-cost">800</p>
-                    <p class="dish-title">Столетняя жижа</p>
-                    <p class="dish-weight">330</p>
-                    <button class="select-dish-button ">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="../imgs/dishes/drink-3.jpeg" alt="drink">
-                    <p class="dish-cost">430</p>
-                    <p class="dish-title">Ацетон</p>
-                    <p class="dish-weight">330</p>
-                    <button class="select-dish-button ">Добавить</button>
-                </div>
-            </div>
-        </section>
+        <section id="dishes-container"></section>
 
         <section>
             <form action="https://httpbin.org/post" method="post">
@@ -114,33 +38,20 @@
                     <div class="order-lunch-part">
                         <h3>Ваш заказ</h3>
 
-                        <label class="form-dish-input" for="soup">Суп</label>
-                        <select class="form-select-input" id="soup" name="soup" required>
-                            <option value="">-- Выберите суп --</option>
-                            <option value="kimchi">Суп кимчи</option>
-                            <option value="bachchi">Суп бахчи</option>
-                            <option value="harchi">Суп харчи</option>
-                        </select>
+                        <label class="selected-dish-category-label">Суп</label>
+                        <label class="selected-dish-label" id="soup-selected">Блюдо не выбрано</label>
+                        
+                        <label class="selected-dish-category-label">Главное блюдо</label>
+                        <label class="selected-dish-label" id="main-dish-selected">Блюдо не выбрано</label>
+                        
+                        <label class="selected-dish-category-label">Напиток</label>
+                        <label class="selected-dish-label" id="drink-selected">Блюдо не выбрано</label>
 
-                        <label class="form-dish-input" for="main-dish">Главное блюдо</label>
-                        <select class="form-select-input" id="main-dish" name="main-dish" required>
-                            <option value="">-- Выберите главное блюдо --</option>
-                            <option value="wok-tai">Wok Тайская креветка</option>
-                            <option value="wok-pan">Wok паназиатский</option>
-                            <option value="wok-classic">Wok классический</option>
-                        </select>
+                        <label class="selected-dish-category-label">Стоимость заказа</label>
+                        <label class="selected-dish-label" id="total-cost">0 ₽</label>
 
-                        <label for="drink">Напиток</label>
-                        <select class="form-select-input" id="drink" name="drink" required>
-                            <option value="">-- Выберите напиток --</option>
-                            <option value="dragon-blood">Кровь дракона</option>
-                            <option value="old-drink">Столетняя жижа</option>
-                            <option value="acetone-drink">Ацетон</option>
-                        </select>
-
-
-                        <label class="form-dish-input" for="order-comment">Комментарии к заказу</label>
-                        <textarea rows="10" id="order-comment" required></textarea>
+                        <label class="form-dish-input" for="order-comment">Комментарий к заказу</label>
+                        <textarea rows="10" cols="40" id="order-comment" required></textarea>
                     </div>
                     <div class="order-lunch-part">
                         <h3>Ваши данные</h3>

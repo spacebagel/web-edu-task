@@ -21,6 +21,10 @@ img {
     border-radius: 35px;
 }
 
+main {
+    margin-bottom: 3em;
+}
+
 .dish-card:hover {
     border: 2px solid tomato;
     cursor: pointer;
@@ -35,6 +39,14 @@ img {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.selected-dish-label {
+    margin-bottom: 1em;
+}
+
+.selected-dish-category-label {
+    font-weight: bold;
 }
 
 .dish-cost {
