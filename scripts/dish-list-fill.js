@@ -12,7 +12,9 @@ function renderDishes() {
     const categories = {
         soup: 'Выберите суп',
         'main-dish': 'Выберите главное блюдо',
-        drink: 'Выберите напиток'
+        salad: 'Выберите салат',
+        drink: 'Выберите напиток',
+        dessert: 'Выберите десерт'       
     };
 
     const container = document.querySelector('#dishes-container');
@@ -23,6 +25,9 @@ function renderDishes() {
         const heading = document.createElement('h2');
         heading.textContent = categories[category];
         section.appendChild(heading);
+
+        
+
 
         const dishContainer = document.createElement('div');
         dishContainer.className = 'lunch-dish-container';
