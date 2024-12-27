@@ -1,5 +1,5 @@
 let totalCost = 0;
-const selectedDishes = { soup: null, 'main-dish': null, drink: null };
+const selectedDishes = { soup: null, 'main-dish': null, drink: null, salad: null, dessert: null };
 
 let selectedSubCategories = {
     soup: null,
@@ -53,6 +53,7 @@ function renderDishes() {
         const section = document.createElement('section');
         const heading = document.createElement('h2');
         heading.textContent = categories[category];
+        section.id = `${category}-dish-section`;
         section.appendChild(heading);
 
         const subCategoryContainer = document.createElement('div');
