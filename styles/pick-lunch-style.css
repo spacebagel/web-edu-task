@@ -1,8 +1,8 @@
-
 .lunch-dish-container {
     display: grid;
     width: 100%;
     column-gap: 10px;
+    row-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -97,7 +97,7 @@ h3 {
     font-weight: normal;
 }
 
-.form-input-label {
+/* .form-input-label {
 }
 
 
@@ -107,7 +107,7 @@ h3 {
 
 .form-dish-input {
 
-}
+} */
 
 select,
 input::file-selector-button,
@@ -154,6 +154,32 @@ textarea {
     margin-bottom: 1em;
 }
 
+.dish-subcategory-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.dish-subcategory-button {
+    color: rgb(64, 124, 11);
+    background-color: transparent;
+    border: none;
+    padding: 6px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+}
+
+.dish-subcategory-button:hover {
+    background-color: rgb(188, 231, 150);
+
+}
+
+.dish-subcategory-button.active {
+    background-color: rgb(188, 231, 150);
+}
+
 @media screen and (max-width: 750px) {
     h2 {
         text-align: center;
@@ -163,11 +189,15 @@ textarea {
         width: 100%;
         align-items: center;
     }
+
     .dish-card {
         display: flex;
         flex-direction: column;
-        
         padding: 1em 1em 1em 1em;
+    }
+
+    .dish-weight {
+        margin-top: 0;
     }
 
     .lunch-dish-container {
@@ -180,7 +210,8 @@ textarea {
     }
 
     img {
-        max-width: 10em;
+        max-height: 12em;
+        object-fit: cover;
     }
 
     h1 {
@@ -195,6 +226,7 @@ textarea {
         justify-content: center;
         width: 100%;
     }
+
     .login-link {
         visibility: collapse;
     }
@@ -204,5 +236,9 @@ textarea {
         flex-direction: column;
         justify-content: center;
         gap: 0;
+    }
+
+    .dish-subcategory-div {
+        justify-content: center;
     }
 }
