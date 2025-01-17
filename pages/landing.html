@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка ланчей</title>
+    <link rel="stylesheet" href="../styles/landing-style.css">
+    <link rel="stylesheet" href="../styles/main-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="../imgs/icons/icon.png">
+</head>
+
+<body>
+
+    <header class="mt-4 text-center">
+        <div id="hero-section" class="container">
+            <h1 class="display-4">Доставка ланчей <a href="../index.html"><strong>"Food Construct"</strong></a></h1>
+            <p class="lead">Food Construct - доставка бизнес-ланчей в Москве. Мы привезем вам горячую вкусную еду в
+                любую точку города к назначенному времени</p>
+            <img src="../imgs/promo/promo-meal.webp" alt="food" class="rounded-4 img-fluid my-4">
+        </div>
+    </header>
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <h3>Свежие продукты</h3>
+                        <p>Для приготовления ваших блюд мы используем только самые свежие ингредиенты</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Быстрая доставка</h3>
+                        <p>Привозим обед к назначенному времени с 7:00 до 23:00 без опозданий</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Настраиваемое меню</h3>
+                        <p>Выберите свои любимые блюда и соберите свой собственный комплект на ланч</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-section" class="make-order-section py-5 text-center">
+            <div class="container">
+                <h2>Готовы заказать?</h2>
+                <p>Нажмите на кнопку ниже, чтобы начать собирать заказ.</p>
+                <a href="../pages/pick-lunch.html" class="btn btn-primary btn-lg">Собрать ланч</a>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2>Напишите нам</h2>
+                <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="i@mail.me"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"
+                            placeholder="Текст сообщения" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div id="our-contacts" class="footer-content">
+                <p class="footer-text">Позвонить нам: +7-999-999-99-99</p>
+                <p class="footer-text">Email: <a href="mailto:yummy_food@food.food"
+                        class="alt-link">yummy_food@food.food</a></p>
+            </div>
+            <div class="footer-content">
+                <a class="alt-link" href="../pages/feedback.html">Напишите нам</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
